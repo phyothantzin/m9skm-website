@@ -4,7 +4,6 @@ import heroApp from "@/public/assets/home-page/hero_app.png";
 import { Button } from "@/components/ui/button";
 import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 import { useState } from "react";
-import Link from "next/link";
 
 import Viber from "../../../public/assets/footer/footer-viber.png";
 import Telegram from "../../../public/assets/footer/footer-telegram.png";
@@ -37,7 +36,7 @@ function Hero({ title, description }: any) {
           <p className="subTitleMM pb-2 font-bold">ဆက်သွယ်ရန်</p>
 
           <div className="flex gap-5 ">
-            <Link href={viberLink}>
+            <a href={viberLink}>
               <div className="flex gap-4 md:gap-5 items-center bg-[#573187] rounded-lg">
                 <Image
                   src={Viber}
@@ -47,9 +46,9 @@ function Hero({ title, description }: any) {
                   className="w-10 h-10 md:w-12 md:h-12"
                 ></Image>
               </div>
-            </Link>
+            </a>
 
-            <Link href={telegramLink}>
+            <a href={telegramLink}>
               <div className="flex gap-4 md:gap-5 items-center bg-[#0082be] rounded-lg">
                 <Image
                   src={Telegram}
@@ -59,8 +58,8 @@ function Hero({ title, description }: any) {
                   className="w-10 h-10 md:w-12 md:h-12"
                 ></Image>
               </div>
-            </Link>
-            <Link href={`tel:${phoneNumber}`}>
+            </a>
+            <a href={`tel:${phoneNumber}`}>
               <div className="flex gap-4 md:gap-5 items-center bg-[#58b961] rounded-lg">
                 <Image
                   src={Phone}
@@ -70,7 +69,7 @@ function Hero({ title, description }: any) {
                   className="w-10 h-10 md:w-12 md:h-12"
                 ></Image>
               </div>
-            </Link>
+            </a>
           </div>
         </div>
         {/* new end */}
@@ -86,7 +85,7 @@ function Hero({ title, description }: any) {
         />
       </div>
 
-      <Link href="#servicesSection" scroll={true}>
+      <a href="#servicesSection">
         <div className="absolute -bottom-14 md:bottom-0 left-1/2 transform -translate-x-1/2 text-white">
           <div className="flex flex-col items-center">
             <p className="md:text-white font-semibold text-sm md:text-base">
@@ -97,7 +96,7 @@ function Hero({ title, description }: any) {
             </div>
           </div>
         </div>
-      </Link>
+      </a>
     </div>
   );
 }

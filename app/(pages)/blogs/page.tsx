@@ -6,7 +6,6 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import Pagination from "@/app/components/utilities/Pagination";
 import Footer from "@/app/components/Footer";
-import Link from "next/link";
 
 const PAGE_SIZE = 4;
 
@@ -47,7 +46,7 @@ function page() {
         {/* card */}
         {paginatedData?.map((item: any) => {
           return (
-            <Link key={item?.id} href={`blogs/${item?.id}`}>
+            <a key={item?.id} href={`blogs/${item?.id}`}>
               <div className=" w-full h-[600px] md:w-[400px] md:h-[590px] bg-black relative rounded-md overflow-hidden">
                 <div className="w-full h-[300px] ">
                   <Image
@@ -76,7 +75,7 @@ function page() {
                   </button>
                 </div>
               </div>
-            </Link>
+            </a>
           );
         })}
       </div>

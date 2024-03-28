@@ -1,7 +1,6 @@
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import DemoPic from "../../../public/assets/news/news.jpg";
-import Link from "next/link";
 import { Card, CardContent } from "@/components/ui/card";
 import {
   Carousel,
@@ -47,7 +46,7 @@ const Blogs = () => {
               key={newItem?.id}
               className="md:basis-1/2 lg:basis-1/3 "
             >
-              <Link href={`blogs/${newItem?.id}`}>
+              <a href={`blogs/${newItem?.id}`}>
                 <div className="h-[300px] rounded-xl overflow-hidden cursor-pointer">
                   <div className="w-full h-full relative">
                     <Image
@@ -77,7 +76,7 @@ const Blogs = () => {
                     </div>
                   </div>
                 </div>
-              </Link>
+              </a>
             </CarouselItem>
           ))}
         </CarouselContent>

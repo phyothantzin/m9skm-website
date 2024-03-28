@@ -1,5 +1,4 @@
 "use client";
-import Link from "next/link";
 import React, { useState, useEffect } from "react";
 import NavLink from "./NavLink";
 import m9Logo from "@/public/assets/home-page/m9logo.png";
@@ -58,7 +57,7 @@ const Navbar = ({ visibleDefault, fixed = true }: Props) => {
         sticky mx-auto text-black top-0 left-0 right-0 z-10 bg-transparent transition-all duration-300`}
       >
         <div className="flex md:py-4 flex-wrap items-center justify-between mx-auto px-5 lg:px-20 my-3 md:my-0">
-          <Link href="/">
+          <a href="/">
             <div className="w-[50px] h-[50px] md:w-[60px] md:h-[60px] xl:w-[80px] xl:h-[80px]">
               <Image
                 width={50}
@@ -67,7 +66,7 @@ const Navbar = ({ visibleDefault, fixed = true }: Props) => {
                 className="w-full h-full"
               />
             </div>
-          </Link>
+          </a>
           <div className="mobile-menu block md:hidden">
             {!navbarOpen ? (
               <button

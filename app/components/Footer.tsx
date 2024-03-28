@@ -4,10 +4,9 @@ import React, { useState } from "react";
 import Viber from "../../public/assets/footer/footer-viber.png";
 import Telegram from "../../public/assets/footer/footer-telegram.png";
 import Phone from "../../public/assets/footer/footer-phone.png";
-import Link from "next/link";
 import Contacts from "./utilities/Contacts";
 const Footer = ({ footerColor }: { footerColor: string }) => {
-  const {viberLink, telegramLink, phoneNumber} = Contacts();
+  const { viberLink, telegramLink, phoneNumber } = Contacts();
 
   return (
     <div
@@ -18,7 +17,7 @@ const Footer = ({ footerColor }: { footerColor: string }) => {
       <p className="subTitleMM text-center pb-7 font-bold">ဆက်သွယ်ရန်</p>
 
       <div className="flex flex-col lg:flex-row items-center px-3 md:px-5 justify-center gap-5 text-white font-semibold ">
-        <Link href={viberLink}>
+        <a href={viberLink}>
           <div className="flex gap-4 md:gap-5 items-center w-[290px] md:min-w-[310px] lg:w-[29%] max-w-[330px] p-3 bg-[#573187] rounded-lg">
             <Image
               src={Viber}
@@ -29,9 +28,9 @@ const Footer = ({ footerColor }: { footerColor: string }) => {
             ></Image>
             <p className="text-sm md:text-md">Viber ဖြင့်ဆက်သွယ်ရန် နှိပ်ပါ</p>
           </div>
-        </Link>
+        </a>
 
-        <Link href={telegramLink}>
+        <a href={telegramLink}>
           <div className="flex gap-4 md:gap-5 items-center w-[290px] md:min-w-[310px] lg:w-[29%] max-w-[330px] p-3 bg-[#0082be] rounded-lg">
             <Image
               src={Telegram}
@@ -44,8 +43,8 @@ const Footer = ({ footerColor }: { footerColor: string }) => {
               Telegram ဖြင့်ဆက်သွယ်ရန် နှိပ်ပါ
             </p>
           </div>
-        </Link>
-        <Link href={`tel:${phoneNumber}`}>
+        </a>
+        <a href={`tel:${phoneNumber}`}>
           <div className="flex gap-4 md:gap-5 items-center w-[290px] md:min-w-[310px] lg:w-[29%] max-w-[330px] p-3 bg-[#58b961] rounded-lg">
             <Image
               src={Phone}
@@ -56,7 +55,7 @@ const Footer = ({ footerColor }: { footerColor: string }) => {
             ></Image>
             <p className="text-sm md:text-md">ဖုန်းဖြင့်ဆက်သွယ်မည်</p>
           </div>
-        </Link>
+        </a>
       </div>
 
       <div className="flex w-full my-5 px-5 lg:px-20 justify-between text-sm md:text-base">
